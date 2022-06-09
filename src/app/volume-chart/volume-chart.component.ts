@@ -25,6 +25,7 @@ export class VolumeChartComponent implements OnInit {
       },
       series: [
         {
+          name: '01k Alpha',
           data: this.data.map(el => el.volume)
         }
         ],
