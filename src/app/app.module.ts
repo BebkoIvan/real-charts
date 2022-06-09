@@ -7,11 +7,13 @@ import { PricesChartComponent } from './prices-chart/prices-chart.component';
 import { VolumeChartComponent } from './volume-chart/volume-chart.component';
 import { NgxSelectModule } from 'ngx-select-ex';
 import { FormsModule } from '@angular/forms';
+import { NewsComponent } from './news/news.component';
 @NgModule({
   declarations: [
     AppComponent,
     PricesChartComponent,
-    VolumeChartComponent
+    VolumeChartComponent,
+    NewsComponent
   ],
   imports: [
     BrowserModule,
