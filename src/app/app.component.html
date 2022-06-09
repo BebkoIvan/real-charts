@@ -1,29 +1,10 @@
-<div style="text-align:center">
+<div style="text-align:center; padding: 50px 100px;">
+  <div class="city-select">
+    <span>Please select City</span>
+    <ngx-select [items]="items" [(ngModel)]="currentCity" (ngModelChange)="onCityChange($event)"></ngx-select>
+  </div>
   <div *ngIf="dataIsLoaded">
-    <apx-chart
-      [series]="chartOptions.series"
-      [chart]="chartOptions.chart"
-      [xaxis]="chartOptions.xaxis"
-      [yaxis]="chartOptions.yaxis"
-      [legend]="chartOptions.legend"
-      [title]="chartOptions.title"
-      [colors]="chartOptions.colors"
-      [stroke]="chartOptions.stroke"
-      [plotOptions]="chartOptions.plotOptions"
-    ></apx-chart>
-
-    <apx-chart
-      [series]="volumeCharOptions.series"
-      [chart]="volumeCharOptions.chart"
-      [xaxis]="volumeCharOptions.xaxis"
-      [yaxis]="volumeCharOptions.yaxis"
-      [legend]="volumeCharOptions.legend"
-      [title]="volumeCharOptions.title"
-      [dataLabels]="volumeCharOptions.dataLabels"
-      [colors]="volumeCharOptions.colors"
-      [stroke]="volumeCharOptions.stroke"
-      [plotOptions]="volumeCharOptions.plotOptions"
-    ></apx-chart>
-
+    <app-prices-chart [data]="data"></app-prices-chart>
+    <app-volume-chart [data]="data"></app-volume-chart>
   </div>
 </div>
